@@ -8,6 +8,7 @@ public class Platform1Movement : MonoBehaviour, BaseAI.IBaseRegion
     private Vector3 initialPosisition;
     [SerializeField] private bool moving;
     private Vector3 rotationCenter;
+    [SerializeField] private GameObject Center;
     private Vector3 rotationStartPos;
     [SerializeField] private float rotationSpeed = 1.0f;
 
@@ -26,7 +27,9 @@ public class Platform1Movement : MonoBehaviour, BaseAI.IBaseRegion
 
     void Start()
     {
-        rotationCenter = transform.position + 10 * Vector3.back;
+        rotationCenter = Center.GetComponent<Transform>().position; 
+        
+        //rotationCenter = transform.position + 10 * Vector3.back;
         rotationStartPos = transform.position;
     }
 

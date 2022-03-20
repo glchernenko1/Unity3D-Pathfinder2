@@ -24,7 +24,7 @@ namespace BaseAI
         /// <param name="destination">Целевой регион</param>
         /// <param name="movementProperties">Параметры движения</param>
         /// <returns>Список точек маршрута</returns>
-        public List<PathNode> FindPath(PathNode start, BaseRegion destination, MovementProperties movementProperties)
+        public List<PathNode> FindPath(PathNode start, string destination, MovementProperties movementProperties)
         {
             //  Реализовать что-то наподобие A* тут
             //  Можно попробовать и по-другому, например, с помощью NaviMesh. Только оно с динамическим регионом не сработает
@@ -153,9 +153,10 @@ namespace BaseAI
         /// </summary>
         private bool FindPath(PathNode start, PathNode target, MovementProperties movementProperties, UpdatePathListDelegate updater)
         {
+            return false;
             /*
             List<PathNode> result = new List<PathNode>();
-
+            
             updater(result);
 
             Debug.Log("Маршрут обновлён");
