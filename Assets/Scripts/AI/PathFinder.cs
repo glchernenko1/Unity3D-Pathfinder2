@@ -55,7 +55,7 @@ namespace BaseAI
         /// <summary>
         /// 
         /// </summary>
-        private float rayRadius;
+        private float rayRadius = 2f;
 
         public PathFinder()
         {
@@ -153,6 +153,10 @@ namespace BaseAI
         /// </summary>
         private bool FindPath(PathNode start, PathNode target, MovementProperties movementProperties, UpdatePathListDelegate updater)
         {
+            
+            
+            
+            
             return false;
             /*
             List<PathNode> result = new List<PathNode>();
